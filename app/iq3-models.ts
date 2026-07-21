@@ -1,0 +1,177 @@
+export type IQ3Model = {
+  slug: string;
+  name: string;
+  type: string;
+  duty: string;
+  image: string;
+  summary: string;
+  description: string;
+  highlights: string[];
+  specs: [string, string][];
+  officialUrl: string;
+};
+
+export const iq3Models: IQ3Model[] = [
+  {
+    slug: "iq3-pro",
+    name: "IQ3 Pro",
+    type: "Multi-turn",
+    duty: "Isolation / Regulating",
+    image: "/images/products/iq3-pro-all/iq3-pro.jpg",
+    summary: "Bộ truyền động multi-turn thông minh cho nhiệm vụ isolation và regulating trong môi trường khắc nghiệt.",
+    description: "IQ3 Pro là nền tảng actuator multi-turn có khả năng cấu hình qua Rotork App, điều khiển không xâm nhập, data logger và kết nối hệ thống công nghiệp.",
+    highlights: ["Tối đa 60 starts mỗi giờ", "Double-sealed IP66/68", "Hỗ trợ SIL2/3 theo cấu hình", "1 pha, 3 pha và DC"],
+    specs: [["Chuyển động", "Multi-turn"], ["Nguồn điện", "1 pha · 3 pha · DC"], ["Nhiệm vụ", "Isolation / Regulating"], ["Tần suất", "Tối đa 60 starts/giờ"], ["Bảo vệ", "IP66/68 · 7 m / 72 giờ"], ["Kết nối", "Ethernet · Fieldbus · Hardwired"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iq3-pro",
+  },
+  {
+    slug: "iq3-pro-remote-hand-station-rhs",
+    name: "IQ3 Pro Remote Hand Station (RHS)",
+    type: "Remote interface",
+    duty: "Remote operation",
+    image: "/images/products/iq3-pro-all/iq3-pro-remote-hand-station-rhs.jpg",
+    summary: "Giao diện vận hành, truy vấn và cấu hình từ xa cho actuator IQ3 Pro đặt tại vị trí khó tiếp cận.",
+    description: "RHS sao chép giao diện người dùng IQ3 Pro và có thể lắp cách actuator tối đa 100 m bằng cáp dữ liệu tiêu chuẩn.",
+    highlights: ["Khoảng cách tới 100 m", "Lắp tường hoặc lắp cột", "Cấp nguồn từ actuator", "Tùy chọn explosionproof"],
+    specs: [["Chức năng", "Operation · Interrogation · Configuration"], ["Khoảng cách", "Tối đa 100 m"], ["Nguồn", "24 VDC từ actuator"], ["Lắp đặt", "Wall / Pole mount"], ["Bảo vệ", "IP66/68 · 7 m / 72 giờ"], ["Giao diện", "Replica of IQ3 Pro UI"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iq3-pro-remote-hand-station-rhs",
+  },
+  {
+    slug: "iq3-pro-set",
+    name: "IQ3 Pro SET",
+    type: "Legacy upgrade",
+    duty: "Obsolescence management",
+    image: "/images/products/iq3-pro-all/iq3-pro-set.jpg",
+    summary: "Giải pháp nâng cấp nền tảng IQ3 Pro cho hệ thống actuator legacy sử dụng non-integral starter SyncroSET.",
+    description: "IQ3 Pro SET hỗ trợ quản lý thiết bị lỗi thời bằng cách thay thế actuator legacy trong khi duy trì khả năng tương thích với hạ tầng hiện hữu sau khi được khảo sát.",
+    highlights: ["Hỗ trợ actuator legacy", "Nền tảng IQ3 Pro hiện hành", "Giảm thay đổi hạ tầng", "Cần khảo sát cấu hình cũ"],
+    specs: [["Vai trò", "Legacy actuator replacement"], ["Nền tảng", "IQ3 Pro"], ["Starter context", "Non-integral / SyncroSET"], ["Xác nhận", "Theo model và site wiring"], ["Bảo vệ", "Theo cấu hình IQ3 Pro"], ["Dữ liệu cần", "Nameplate · Wiring · Valve data"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iq3-pro-set",
+  },
+  {
+    slug: "iq3d-pro-direct-current-dc",
+    name: "IQ3D Pro - Direct Current (DC)",
+    type: "Multi-turn DC",
+    duty: "Isolation / Regulating",
+    image: "/images/products/iq3-pro-all/iq3d-pro-direct-current-dc.jpg",
+    summary: "Phiên bản multi-turn dùng nguồn DC, kế thừa các tính năng điều khiển và chẩn đoán của IQ3 Pro.",
+    description: "IQ3D Pro phục vụ những vị trí cần nguồn một chiều với điều khiển tại chỗ không xâm nhập, enclosure double-sealed và khả năng giám sát từ xa.",
+    highlights: ["Nguồn Direct Current", "Multi-turn intelligent actuator", "Điều khiển không xâm nhập", "Network compatibility"],
+    specs: [["Chuyển động", "Multi-turn"], ["Nguồn điện", "Direct Current (DC)"], ["Nhiệm vụ", "Isolation / Regulating"], ["Bảo vệ", "IP66/68 · 7 m / 72 giờ"], ["Điều khiển", "Non-intrusive local controls"], ["Kết nối", "Theo cấu hình mạng được chọn"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iq3d-pro-direct-current-dc",
+  },
+  {
+    slug: "iq3h-pro-high-speed",
+    name: "IQ3H Pro - High Speed",
+    type: "High-speed multi-turn",
+    duty: "Fast operation",
+    image: "/images/products/iq3-pro-all/iq3h-pro-high-speed.jpg",
+    summary: "Phiên bản tốc độ đầu ra cao cho diverter valve và các ứng dụng cần vận hành nhanh, positive seating.",
+    description: "IQ3H Pro sử dụng gearing được tối ưu để hạn chế backdriving và cung cấp chức năng self-locking cho van.",
+    highlights: ["High output speed", "Self-locking gearing", "Positive seating", "Diverter valve applications"],
+    specs: [["Chuyển động", "Multi-turn"], ["Đặc tính", "High output speed"], ["Cơ cấu", "Irreversible / Self-locking"], ["Ứng dụng nêu bởi hãng", "Meter prover diverter valves"], ["Nền tảng", "IQ3 Pro"], ["Cấu hình", "Xác nhận theo valve duty"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iq3h-pro-high-speed",
+  },
+  {
+    slug: "iq3m-pro-modulating",
+    name: "IQ3M Pro - Modulating",
+    type: "Multi-turn modulating",
+    duty: "Modulating",
+    image: "/images/products/iq3-pro-all/iq3m-pro-modulating.jpg",
+    summary: "Actuator multi-turn 3 pha cho modulating duty với solid-state reversing starter và phản hồi điều khiển nhanh.",
+    description: "IQ3M Pro kết hợp nền tảng IQ3 Pro với mạch remote control đáp ứng nhanh và electronic motor brake cho điều khiển modulating.",
+    highlights: ["3-phase supply", "Solid-state reversing starter", "Electronic motor brake", "Fast-response control"],
+    specs: [["Chuyển động", "Multi-turn"], ["Nguồn điện", "3 pha"], ["Nhiệm vụ", "Modulating"], ["Motor switching", "Solid-state"], ["Motor brake", "Electronic"], ["Bảo vệ", "Theo cấu hình IQ3 Pro"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iq3m-pro-modulating",
+  },
+  {
+    slug: "iq3ml-pro-linear-modulating",
+    name: "IQ3ML Pro - Linear Modulating",
+    type: "Linear modulating",
+    duty: "Modulating",
+    image: "/images/products/iq3-pro-all/iq3ml-pro-linear-modulating.jpg",
+    summary: "Phiên bản linear output 3 pha cho modulating duty, phục vụ ứng dụng cần điều khiển tuyến tính chính xác.",
+    description: "IQ3ML Pro sử dụng solid-state reversing starter, electronic motor brake và mạch remote control đáp ứng nhanh trên nền tảng IQ3 Pro.",
+    highlights: ["Linear output", "3-phase supply", "Modulating duty", "Fast-response control"],
+    specs: [["Chuyển động", "Linear output"], ["Nguồn điện", "3 pha"], ["Nhiệm vụ", "Modulating"], ["Motor switching", "Solid-state"], ["Motor brake", "Electronic"], ["Nền tảng", "IQ3 Pro"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iq3ml-pro-linear-modulating",
+  },
+  {
+    slug: "iq3s-pro-single-phase",
+    name: "IQ3S Pro - Single-Phase",
+    type: "Single-phase multi-turn",
+    duty: "Isolation / Regulating",
+    image: "/images/products/iq3-pro-all/iq3s-pro-single-phase.jpg",
+    summary: "Phiên bản multi-turn một pha với direct torque range 10–450 Nm và các tính năng thông minh của IQ3 Pro.",
+    description: "IQ3S Pro phù hợp cho hệ thống chỉ có nguồn một pha nhưng vẫn cần enclosure double-sealed, điều khiển không xâm nhập và kết nối giám sát.",
+    highlights: ["Single-phase supply", "10–450 Nm", "IP66/68 double-sealed", "Remote monitoring"],
+    specs: [["Chuyển động", "Multi-turn"], ["Nguồn điện", "1 pha"], ["Direct torque", "10–450 Nm"], ["Nhiệm vụ", "Isolation / Regulating"], ["Bảo vệ", "IP66/68 · 7 m / 72 giờ"], ["Kết nối", "Theo tùy chọn IQ3 Pro"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iq3s-pro-single-phase",
+  },
+  {
+    slug: "iqt3-pro",
+    name: "IQT3 Pro",
+    type: "Part-turn",
+    duty: "Isolation / Regulating",
+    image: "/images/products/iq3-pro-all/iqt3-pro.jpg",
+    summary: "Bộ truyền động part-turn thông minh, IP66/68, hỗ trợ SIL2/3 và nền tảng kết nối Rotork App.",
+    description: "IQT3 Pro là model part-turn chủ lực trong range IQ3 Pro cho các nhiệm vụ isolation và regulating.",
+    highlights: ["1 pha, 3 pha và DC", "Tối đa 1.200 starts/giờ", "IP66/68", "SIL2/3"],
+    specs: [["Chuyển động", "Part-turn"], ["Nguồn điện", "1 pha · 3 pha · DC"], ["Nhiệm vụ", "Isolation / Regulating"], ["Tần suất", "Tối đa 1.200 starts/giờ"], ["Bảo vệ", "IP66/68 · 7 m / 72 giờ"], ["An toàn", "SIL2/3"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iqt3-pro",
+  },
+  {
+    slug: "iqt3-pro-shutdown-battery",
+    name: "IQT3 Pro Shutdown Battery",
+    type: "Fail-to-position part-turn",
+    duty: "Emergency positioning",
+    image: "/images/products/iq3-pro-all/iqt3-pro-shutdown-battery.jpg",
+    summary: "Actuator part-turn tích hợp battery pack để di chuyển về vị trí an toàn khi mất nguồn điện lưới.",
+    description: "IQT3 Pro Shutdown Battery cung cấp fail-to-position trong môi trường hazardous hoặc non-hazardous, với các chế độ fail được cấu hình theo yêu cầu quá trình.",
+    highlights: ["Integral battery pack", "Fail-open / close / stayput / %", "UPS operating mode", "Explosionproof solution"],
+    specs: [["Chuyển động", "Part-turn"], ["Fail action", "Open · Close · Stayput · % position"], ["Chế độ", "Fail-to-position / UPS"], ["Sạc pin", "Từ actuator khi có mains power"], ["Môi trường", "Hazardous / Non-hazardous"], ["Nền tảng", "IQT3 Pro"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iqt3-pro-shutdown-battery",
+  },
+  {
+    slug: "iqt3f-pro-full-turn",
+    name: "IQT3F Pro - Full-Turn",
+    type: "Extended-rotation part-turn",
+    duty: "Full-turn / Multiport",
+    image: "/images/products/iq3-pro-all/iqt3f-pro-full-turn.jpg",
+    summary: "Phiên bản extended rotation cho part-turn valve cần góc quay lớn hơn 90°, bao gồm 180° và 270°.",
+    description: "IQT3F Pro có tốc độ đầu ra thấp để tăng độ chính xác vị trí và các biến thể được tối ưu cho rising stem, non-rising stem hoặc linear direct drive.",
+    highlights: ["Góc quay lớn hơn 90°", "Multiport valve control", "Low-speed positioning", "1 pha, 3 pha và DC"],
+    specs: [["Chuyển động", "Full-turn / Extended rotation"], ["Góc ứng dụng", "180° · 270° · Theo cấu hình"], ["Nguồn điện", "1 pha · 3 pha · DC"], ["Biến thể", "IQTF-A · IQTF-B · IQTF-L"], ["Điều tốc", "CW / CCW độc lập"], ["Môi trường", "Hazardous option"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iqt3f-pro-full-turn",
+  },
+  {
+    slug: "iqt3m-pro-modulating",
+    name: "IQT3M Pro - Modulating",
+    type: "Part-turn modulating",
+    duty: "S4 / Class C",
+    image: "/images/products/iq3-pro-all/iqt3m-pro-modulating.jpg",
+    summary: "Phiên bản part-turn cho modulating duty với khả năng điều khiển tới 1.800 starts mỗi giờ.",
+    description: "IQT3M Pro sử dụng solid-state motor switching và mạch remote control đáp ứng nhanh để cung cấp chuyển động modulating có độ phân giải cao.",
+    highlights: ["Tối đa 1.800 starts/giờ", "S4 / Class C", "Solid-state switching", "1 pha, 3 pha và DC"],
+    specs: [["Chuyển động", "Part-turn"], ["Nhiệm vụ", "Modulating"], ["Duty class", "S4 / Class C"], ["Tần suất", "Tối đa 1.800 starts/giờ"], ["Nguồn điện", "1 pha · 3 pha · DC"], ["Bảo vệ", "IP66/68 · 7 m / 72 giờ"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iqt3m-pro-modulating",
+  },
+  {
+    slug: "iqt3n-pro-navalmarine",
+    name: "IQT3N Pro - Naval/Marine",
+    type: "Naval part-turn",
+    duty: "Marine critical systems",
+    image: "/images/products/iq3-pro-all/iqt3n-pro-navalmarine.jpg",
+    summary: "Actuator part-turn dành cho ứng dụng hải quân và hàng hải, tối ưu cho không gian hạn chế và độ rung cao.",
+    description: "IQT3N Pro là giải pháp nhẹ, hầu như không cần bảo trì, hỗ trợ tích hợp với hệ thống quan trọng trên tàu và được kiểm tra shock tolerance theo MIL-S-901D.",
+    highlights: ["Naval / Marine design", "MIL-S-901D shock tolerance", "High-vibration environment", "1 pha và 3 pha"],
+    specs: [["Chuyển động", "Part-turn"], ["Ứng dụng", "Naval / Maritime"], ["Nguồn điện", "1 pha · 3 pha"], ["Shock tolerance", "Tested to MIL-S-901D"], ["Bảo vệ", "IP66/68 · 7 m / 72 giờ"], ["Lắp đặt", "Confined / High-vibration areas"]],
+    officialUrl: "https://www.rotork.com/en/products/electric-intelligent-actuators/iq3-pro/iqt3n-pro-navalmarine",
+  },
+];
+
+export const iq3DynamicModels = iq3Models.filter((model) => model.slug !== "iqt3-pro");
+
+export function getIQ3Model(slug: string) {
+  return iq3Models.find((model) => model.slug === slug);
+}

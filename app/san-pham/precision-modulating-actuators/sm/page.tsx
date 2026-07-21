@@ -1,0 +1,2 @@
+import type { Metadata } from "next"; import { StandardRangePage } from "../../../components/StandardRangePage"; import { smConfig,smModels } from "../../../advanced-actuator-data";
+export const metadata:Metadata={title:"SM Rotork | High-torque modulating actuators",description:"Rotork SM-1700, SM-5000 và SM-6000 cho high-torque continuous modulation tới 35.251 Nm. Xem thông số, tài liệu và báo giá.",alternates:{canonical:"/san-pham/precision-modulating-actuators/sm"}}; export default function Page(){return <StandardRangePage config={smConfig} models={smModels}/>;}

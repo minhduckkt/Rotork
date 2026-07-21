@@ -1,0 +1,2 @@
+import type { Metadata } from "next"; import { StandardRangePage } from "../../../components/StandardRangePage"; import { cvaConfig,cvaModels } from "../../../advanced-actuator-data";
+export const metadata:Metadata={title:"CVA Rotork | CVL và CVQ process control actuators",description:"Rotork CVA gồm CVL linear và CVQ part-turn cho S9 continuous modulation, IP68 và explosionproof. Xem thông số và báo giá.",alternates:{canonical:"/san-pham/precision-modulating-actuators/cva"}}; export default function Page(){return <StandardRangePage config={cvaConfig} models={cvaModels}/>;}
