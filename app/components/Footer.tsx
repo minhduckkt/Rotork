@@ -83,7 +83,10 @@ export function Footer() {
             <span>MST: 0315555189</span>
           </div>
           <p>Website do Fast Group Engineering vận hành nhằm cung cấp, tư vấn và hỗ trợ kỹ thuật sản phẩm Rotork tại Việt Nam. Rotork và các nhãn hiệu liên quan thuộc chủ sở hữu tương ứng.</p>
-          <Link href="/">rotork.com.vn</Link>
+          <nav className="footer-links" aria-label="Liên kết website">
+            <Link href="/">rotork.com.vn</Link>
+            <a href="https://fastgroup.vn" target="_blank" rel="noopener noreferrer">fastgroup.vn</a>
+          </nav>
         </div>
       </div>
     </footer>
